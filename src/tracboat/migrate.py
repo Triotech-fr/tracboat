@@ -450,8 +450,8 @@ def migrate(trac, gitlab_project_name, gitlab_version, gitlab_db_connector,
 #    gitlab.clear_labels()
 
     # 1. Wiki
-#    LOG.info('migrating %d wiki pages to: %s', len(trac['wiki']), output_wiki_path)
-#    migrate_wiki(trac['wiki'], gitlab, output_wiki_path)
+    LOG.info('migrating %d wiki pages to: %s', len(trac['wiki']), output_wiki_path)
+    migrate_wiki(trac['wiki'], gitlab, output_wiki_path)
     # 2. Milestones
     migrate_milestones(trac['milestones'], gitlab)
 
